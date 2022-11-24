@@ -1,3 +1,5 @@
+# 문제 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/131534
+
 SELECT LEFT(sales_date,4) "YEAR", CAST(mid(sales_date, 6,2) AS UNSIGNED) "MONTH"
 , COUNT(DISTINCT OS.USER_ID) "PUCHASED_USERS"
 , ROUND(COUNT(DISTINCT OS.USER_ID) 
