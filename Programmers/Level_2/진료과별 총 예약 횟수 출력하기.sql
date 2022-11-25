@@ -1,0 +1,5 @@
+SELECT MCDP_CD '진료과코드', count(*) '5월예약건수'
+FROM APPOINTMENT A
+WHERE DATE_FORMAT(APNT_YMD, '%y%m') = 2205
+GROUP BY MCDP_CD
+ORDER BY 5월예약건수, 진료과코드
