@@ -1,0 +1,8 @@
+#문제 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/133025
+
+SELECT FH.FLAVOR
+FROM FIRST_HALF FH, ICECREAM_INFO II
+WHERE FH.FLAVOR = II.FLAVOR
+AND TOTAL_ORDER > 3000
+AND INGREDIENT_TYPE = 'fruit_based'
+ORDER BY TOTAL_ORDER DESC
