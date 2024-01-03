@@ -4,16 +4,10 @@ def solution(picks, minerals):
     for i in range(0,len(minerals),5) :
         pl = minerals[i:i+5]
         result.append([pl.count("diamond"),pl.count("iron"),pl.count("stone")])
-    #print("result : {}".format(result))
-    #print("길이 : {}, 캘 수 있는 개수 : {}".format(len(result),sum(picks)))
     result = result[:sum(picks)]
-    #if sum(picks) >= len(result) :
-    result = sorted(result,key=lambda x : [-((x[0] * 25) + (x[1] * 5) + x[2]), sum(x), -x[0]])
-    #print("result : {}".format(result))
-    
+    result = sorted(result,key=lambda x : [-((x[0] * 25) + (x[1] * 5) + x[2]), sum(x), -x[0]])    
     
     for i in result :
-        #print(i)
         if picks[0] > 0 :
             #print("다이아 곡괭이")
             answer += i[0] + i[1] + i[2]
